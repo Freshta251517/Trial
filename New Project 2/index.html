@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Organizer App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="Logo.png" alt="Date Organizer App Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Plan Your Perfect Date</h1>
+            <p>Select a city and get personalized date ideas!</p>
+            <input type="text" id="city-search" placeholder="Search for a city..." oninput="filterCities()">
+            <div id="city-list" class="city-list">
+                <div onclick="showSuggestions('New York')">New York</div>
+                <div onclick="showSuggestions('Paris')">Paris</div>
+                <div onclick="showSuggestions('Tokyo')">Tokyo</div>
+                <div onclick="showSuggestions('London')">London</div>
+            </div>
+            <div id="suggestions" class="suggestions-container"></div>
+        </section>
+        
+        <section id="features">
+            <h2>Features</h2>
+            <div class="features-container">
+                <div class="feature">
+                    <h3>Personalized Suggestions</h3>
+                    <p>Get date ideas tailored to your preferences and chosen city.</p>
+                </div>
+                <div class="feature">
+                    <h3>Activity Categories</h3>
+                    <p>Explore various activities like outdoor adventures, dining, and more.</p>
+                </div>
+                <div class="feature">
+                    <h3>Event Planner</h3>
+                    <p>Plan and schedule your dates easily within the app.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are passionate about helping couples create memorable experiences together. Our app provides curated date ideas and activities to keep your relationship fun and exciting.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@fundate.com</p>
+            <p>Phone: +46739285806</p>
+        </section>
+        <p>&copy; 2024 FunDate. All rights reserved.</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <ul id="modal-details"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
